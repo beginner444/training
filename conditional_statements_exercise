@@ -1,0 +1,20 @@
+# Write a program that calculates the time required for a movie during the lunch break.
+
+
+from math import ceil
+
+name_of_movie = input()
+duration_of_movie = int(input())
+rest_duration = int(input())
+
+lunch_duration = rest_duration * 0.125
+relaxation = rest_duration * 0.25
+time_left = rest_duration - lunch_duration - relaxation
+
+if time_left >= duration_of_movie:
+    print(f"You have enough time to watch {name_of_movie}"
+          f" and left with {ceil(time_left - duration_of_movie)} minutes free time.")
+else:
+    print(f"You don't have enough time to watch {name_of_movie},"
+          f" you need {ceil(duration_of_movie - time_left)} more minutes.")
+
