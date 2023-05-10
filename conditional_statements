@@ -1,0 +1,22 @@
+# Write a program that calculates a budget based on costs
+
+budget = float(input())
+people = int(input())
+clothes_price = float(input())
+
+decor = budget * 0.10
+
+if people > 150:
+    clothes_price *= 0.90
+
+expenses = (people * clothes_price) + decor
+deficiency = expenses - budget
+excess = budget - expenses
+
+if budget < expenses:
+    print("Not enough money!")
+    print(f"Wingard needs {deficiency:.2f} leva more.")
+else:
+    print("Action!")
+    print(f"Wingard starts filming with {excess:.2f} leva left.")
+
