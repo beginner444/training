@@ -1,0 +1,26 @@
+# Write a program that validates "vegetable", "fruit" or "unknown"
+
+number = int(input())
+
+if -100 <= number <= 100 and number != 0:
+    print("Yes")
+else:
+    print("No")
+
+word = input()
+
+if word == "banana" or word == "apple" or word == "kiwi" or word == "cherry" or word == "lemon":
+    print("fruit")
+elif word == "tomato" or word == "cucumber" or word == "pepper" or word == "carrot":
+    print("Vegetable")
+else:
+    print("unknown")
+
+
+number = int(input())
+
+valid_number = 100 <= number <= 200 or number == 0
+if not valid_number:
+    print("invalid")
+
+
